@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpleados" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9c6524e2-d6e6-44a1-ab88-c1fe5aa5dd73">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Adaptador_Melina"/>
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[YmRfaW52ZW50YXJpby5lbXBsZWFkb3MgLDE1LDE1LDVjZmVmZWE2LWQ2MWUtNDZlOC1iZmZmLTdh
+NTcwMDk4MDNkNzs=]]>
+	</property>
+	<queryString>
+		<![CDATA[SELECT `Id_Empleado`,
+	`Nom_Empleado`,
+	DATE_FORMAT( fecha_nac_emp,'%d/%b/%Y') AS fecha_nac,
+	CONCAT( calle_emp,' No. ',Num_Ext_Emp) AS Calle,
+	CONCAT( 'Col. ',Colonia_Emp,', ',Ciudad_Emp,', ',Estado_Emp) AS Localidad,
+	CONCAT( ' C.P. ',Codigo_Postal_Emp) AS direccion,
+	CONCAT( ROUND( Comision_Emp,2),'%') AS Comision,
+	`CURP_Emp`,
+	`RFC_Emp`,
+	`Sexo_Emp`,
+	DATE_FORMAT( Fecha_Contrato_Emp,'%d/%b/%Y') AS fecha_contrato,
+	`Status_Emp`,
+	`E_Mail_Emp`,
+	`Telefono1_Emp`,
+	`Telefono2_Emp`
+FROM bd_inventario.empleados]]>
+	</queryString>
+	<field name="id_empleado" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Id_Empleado"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_empleado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="nom_empleado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nom_Empleado"/>
+		<property name="com.jaspersoft.studio.field.label" value="nom_empleado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="fecha_nac" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fecha_nac"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha_nac"/>
+	</field>
+	<field name="Calle" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Calle"/>
+		<property name="com.jaspersoft.studio.field.label" value="Calle"/>
+	</field>
+	<field name="Localidad" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Localidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="Localidad"/>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="direccion"/>
+		<property name="com.jaspersoft.studio.field.label" value="direccion"/>
+	</field>
+	<field name="Comision" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Comision"/>
+		<property name="com.jaspersoft.studio.field.label" value="Comision"/>
+	</field>
+	<field name="CURP_Emp" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CURP_Emp"/>
+		<property name="com.jaspersoft.studio.field.label" value="CURP_Emp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="RFC_Emp" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="RFC_Emp"/>
+		<property name="com.jaspersoft.studio.field.label" value="RFC_Emp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="Sexo_Emp" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Sexo_Emp"/>
+		<property name="com.jaspersoft.studio.field.label" value="Sexo_Emp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+		<fieldDescription><![CDATA[M = Masculino\nF = Femenino]]></fieldDescription>
+	</field>
+	<field name="fecha_contrato" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fecha_contrato"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha_contrato"/>
+	</field>
+	<field name="Status_Emp" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Status_Emp"/>
+		<property name="com.jaspersoft.studio.field.label" value="Status_Emp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+		<fieldDescription><![CDATA[A = Activo\\nB = Baja]]></fieldDescription>
+	</field>
+	<field name="E_Mail_Emp" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="E_Mail_Emp"/>
+		<property name="com.jaspersoft.studio.field.label" value="E_Mail_Emp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="Telefono1_Emp" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Telefono1_Emp"/>
+		<property name="com.jaspersoft.studio.field.label" value="Telefono1_Emp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="Telefono2_Emp" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Telefono2_Emp"/>
+		<property name="com.jaspersoft.studio.field.label" value="Telefono2_Emp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
